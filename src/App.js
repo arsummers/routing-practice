@@ -5,7 +5,9 @@ import{
   Route,
   Link
 } from "react-router-dom";
-
+import About from './components/about'
+import Home from './components/home'
+import Users from './components/users'
 
 export default function App() {
   return (
@@ -29,13 +31,15 @@ export default function App() {
 
         <Switch>
           <Route path='/about'>
-            <About />          
+            <AboutRoute />          
             </Route>
+
             <Route path='/users'>
-            <Users />
+            <UsersRoute />
             </Route>
+            
             <Route path='/'>
-            <Home />
+            <HomeRoute />
             </Route>
         </Switch>
      </div>
@@ -43,14 +47,14 @@ export default function App() {
   );
 }
 
-function Home(){
-  return <h2>Home</h2>;
+function HomeRoute(){
+  return <Home />;
 }
 
-function About(){
-  return <h2>About</h2>;
+function AboutRoute(){
+  return <About />;
 }
 
-function Users(){
-  return <h2>Users</h2>;
+function UsersRoute(){
+  return <Users />;
 }
